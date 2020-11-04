@@ -4,7 +4,7 @@ function MovieList(props) {
     return (
         <div className="card-list">
              {props.movies.filter(movie => movie.poster_path).map(movie =>(
-                 <MovieCard movie={movie}></MovieCard>
+                 <MovieCard key={movie.id} movie={movie}></MovieCard>
              ))}
         </div>
     );

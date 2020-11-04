@@ -1,13 +1,16 @@
-import {useState} from "react";
+import {useState,useContext} from "react";
 import './SearchMovie.css';
 import MovieList from "./movieList";
 import Loading from "./Loading";
+import ResultContext from './RestContext';
 
 function SearchMovie() {
    
     const [query,setQuery] = useState('');
     const [movies, setMovies] = useState([]);
     const [loading,setLoading] = useState(false);
+
+    const {count,updateCount} = useContext(ResultContext);
 
     const searchMovies = async(e) => {
         e.preventDefault();
@@ -20,6 +23,7 @@ function SearchMovie() {
             const data = await res.json();
             setMovies(data.results);
             setLoading(false);
+            updateCount(data.results.length)
         } catch (err) {
             console.error(err);
         }
