@@ -1,0 +1,14 @@
+.container {
+    margin: 0 auto;
+    max-width: 1000px;
+    padding:40px;
+    text-align: center;
+}
+
+.message {
+    font-size: 2rem;
+    color: firebrick;
+}
+
+
+  

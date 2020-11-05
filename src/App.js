@@ -4,7 +4,6 @@ import SearchMovie from './searchMovie';
 import SearchCount from './searchCount';
 import { useState } from 'react';
 import React from 'react';
-
 import ResultContext from './RestContext';
 
 function App() {

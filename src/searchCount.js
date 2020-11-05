@@ -1,14 +1,16 @@
 import {useContext} from 'react';
 import ResultContext from './RestContext';
+import './searchCount.css';
 
 function SearchCount() {
     const {count,updateCount} = useContext(ResultContext);
-    console.log(count)
-    return (
-        <div className="container">
-            Number of count is {count}
-        </div>
-    );
+    
+    
+        return (
+            <div className="container">
+                {count > 0 ? <span className='message'>Number of count is {count}</span> : <span></span>}
+            </div>
+        );
 }
 
 export default SearchCount;
