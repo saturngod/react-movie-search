@@ -34,6 +34,36 @@
     background-color: rgba(0,0,0,0.85);
 }
 
+.showingPage {
+    font-size: 2rem;
+    margin-top: 3rem;
+}
+
+
+
+.pagination {
+    list-style: none;
+}
+
+.pagination a {
+    text-decoration: none;
+    color: #CC2211;
+    
+}
+
+.pagination li {
+    margin-top: 20px;
+    background-color: white;
+    display: inline-block;
+    font-size: 2em;
+    border: 1px solid #DDD;
+    padding: 5px;
+    margin-right: 20px;
+    margin-left: 20px;
+    text-transform: capitalize;
+    min-width: 120px;
+}
+
 
 @media(min-width:786px) {
     .form {
